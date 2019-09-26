@@ -4,7 +4,6 @@ import android.app.Application;
 import android.content.Context;
 import android.util.DisplayMetrics;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.zxy.recovery.core.Recovery;
 
 import java.util.ArrayList;
@@ -22,7 +21,6 @@ public class App extends Application {
         super.onCreate();
         app=this;
         getScreen(this);
-        Fresco.initialize(this);
         Recovery.getInstance()
                 .debug(true)
                 .recoverInBackground(false)
